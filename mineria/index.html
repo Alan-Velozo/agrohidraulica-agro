@@ -941,7 +941,7 @@ function track(ev, data){ window.dataLayer.push(Object.assign({event: ev}, data 
 (function(){
   var params = new URLSearchParams(location.search);
   var src = params.get('utm_source') || (params.get('gclid') ? 'google' : (params.get('fbclid') ? 'meta' : 'web'));
-  var ref = 'Ref: MIN-' + src;
+  var ref;
 
   var MSG = {
     general: 'Hola, vi la página de prensas para mangueras para minería y petróleo y quiero hacer una consulta.',
@@ -951,7 +951,7 @@ function track(ev, data){ window.dataLayer.push(Object.assign({event: ev}, data 
     plantilla: 'Hola, quiero que me recomienden una prensa.\nDiámetro máximo que armamos: \nTipo de manguera: \nAlimentación disponible (220 V / 380 V): \nProvincia: ',
     equipo: function(e, art){ return 'Hola, quiero cotizar ' + (art || 'la') + ' ' + e + '. ¿Me pasan la ficha técnica y las condiciones de pago?'; }
   };
-  function waUrl(text){ return 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(text + '\n\n' + ref); }
+  function waUrl(text){ return 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(text + '\n\n'); }
 
   document.querySelectorAll('.js-wa').forEach(function(a){
     var kind = a.dataset.wa || 'general';

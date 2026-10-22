@@ -814,7 +814,7 @@ function track(ev, data){ window.dataLayer.push(Object.assign({event: ev}, data 
 (function(){
   var params = new URLSearchParams(location.search);
   var src = params.get('utm_source') || (params.get('gclid') ? 'google' : (params.get('fbclid') ? 'meta' : 'web'));
-  var ref = 'Ref: AGRO-' + src;
+  var ref;
 
   // Optional H1 by URL parameter (?v=220v | ?v=manual), to repeat the search
   var H1 = {'220v': 'Prensas para mangueras que funcionan con 220 V', 'manual': 'Prensas manuales para mangueras hidráulicas'};
@@ -830,7 +830,7 @@ function track(ev, data){ window.dataLayer.push(Object.assign({event: ev}, data 
     precio: function(m){ return 'Hola, quiero consultar el precio de la ' + m + '.'; },
     info: function(m, art){ return 'Hola, quiero info de ' + (art || 'la') + ' ' + m + '.'; }
   };
-  function waUrl(text){ return 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(text + '\n\n' + ref); }
+  function waUrl(text){ return 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(text + '\n\n'); }
 
   document.querySelectorAll('.js-wa').forEach(function(a){
     var kind = a.dataset.wa || 'general', m = MSG[kind];
