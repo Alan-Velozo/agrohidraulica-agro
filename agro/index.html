@@ -699,7 +699,7 @@ footer strong{color:var(--blanco);display:block;margin-bottom:6px}
       <p class="alt">¿Preferís llamar? <a href="tel:+5493462383095" data-track="phone_contacto">5493462383095</a> · <a href="mailto:contacto@agrohidraulica.com.ar">contacto@agrohidraulica.com.ar</a></p>
     </div>
     <div id="formulario">
-      <form class="form-card" id="lead-form" method="post" action="https://mayoristamayuato.com/mailing/agro.php">
+      <!--<form class="form-card" id="lead-form" method="post" action="https://mayoristamayuato.com/mailing/agro.php">
         <h3>¿Preferís que te contactemos? Pedí tu cotización</h3>
         <p class="sub">Completá tus datos y te respondemos en el horario de atención.</p>
         <div class="fields">
@@ -723,7 +723,29 @@ footer strong{color:var(--blanco);display:block;margin-bottom:6px}
         <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="gclid"><input type="hidden" name="fbclid"><input type="hidden" name="landing" value="agro">
         <div class="form-foot"><button class="btn btn-teal btn-lg" type="submit">Pedir cotización</button></div>
         <p class="privacy">Usamos tus datos solo para responder esta consulta.</p>
-      </form>
+      </form>-->
+      <iframe
+    src="https://api.leadconnectorhq.com/widget/form/T3ej7IawJNJLTelsduoq"
+    style="width:100%;height:100%;border:none;border-radius:8px"
+    id="inline-T3ej7IawJNJLTelsduoq"
+    data-layout="{'id':'INLINE'}"
+    data-trigger-type="alwaysShow"
+    data-trigger-value=""
+    data-activation-type="alwaysActivated"
+    data-activation-value=""
+    data-deactivation-type="neverDeactivate"
+    data-deactivation-value=""
+    data-form-name="Form Agro - Agrohidráulica"
+    data-height="1032"
+    data-layout-iframe-id="inline-T3ej7IawJNJLTelsduoq"
+    data-form-id="T3ej7IawJNJLTelsduoq"
+    data-cookie-consent="true"
+    data-cookie-consent-provider="auto"
+    title="Form Agro - Agrohidráulica"
+    
+        >
+</iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
       <div class="ok" id="lead-ok" role="status" tabindex="-1">
         <h3>Gracias, recibimos tu consulta</h3>
         <p id="ok-text">Te escribimos por WhatsApp en el horario de atención. Si querés adelantar, mandanos fotos o medidas al 5493462383095.</p>
@@ -805,7 +827,7 @@ function track(ev, data){ window.dataLayer.push(Object.assign({event: ev}, data 
   }
 
   // Form
-  var form = document.getElementById('lead-form');
+  /*var form = document.getElementById('lead-form');
   ['utm_source','utm_medium','utm_campaign','utm_content','gclid','fbclid'].forEach(function(k){
     var val = params.get(k); if (val && form.elements[k]) form.elements[k].value = val;
   });
@@ -838,7 +860,7 @@ function track(ev, data){ window.dataLayer.push(Object.assign({event: ev}, data 
           track('form_submit', {necesidad: f.necesidad.value, corriente: cor, origen: src}); done(false); })
         .catch(viaWhatsApp);
     } else { viaWhatsApp(); }
-  });
+  });*/
 })();
 </script>
 </body>
